@@ -1,0 +1,89 @@
+.quicksand-font {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* shared styles */
+.display-flex{
+    display: flex;
+}
+.color-1{
+    color: orange;
+}
+.color-2{
+    color: skyblue;
+}
+.color-3{
+    color: #05D4DF;
+}
+.color-4{
+    color:#5D58EF;
+}
+
+/* nav related styles */
+.navbar{
+    max-width: 1440px;
+    max-height: 62px;
+    margin: 20px auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.brand{
+    align-items: center;
+    gap: 11px;
+}
+.brand-title{
+    font-weight: 800;
+    font-size: 2rem;
+}
+.brand-logo{
+    max-width: 62px;
+}
+.nav-links{
+    gap: 32px;
+}
+.nav-items{
+    list-style: none;
+}
+.nav-items>a{
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+.contact-button{
+    background-color: orange;
+    color: white;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.fa-bars{
+    display: none;
+    font-size: 2rem;
+}
+
+
+
+
+@media screen and (max-width:576px) {
+    .brand-title,
+    .nav-links,
+    .contact-button
+    {
+        display: none;
+    }
+
+    .navbar{
+        justify-content: space-between;
+        margin: 14px 16px;
+        margin: 0 auto;
+        border-bottom: 0.5px solid orange;
+    }
+    .fa-bars{
+        display: block;
+        width: 30px;
+    }
+}
