@@ -4,6 +4,12 @@
   font-style: normal;
 }
 
+.raleway-font {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 /* shared styles */
 .display-flex{
     display: flex;
@@ -29,6 +35,26 @@
     border: none;
     border-radius: 12px;
 }
+.section-title{
+    font-weight: 800;
+    font-size: 2.875rem;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+.card-title{
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.card-description{
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+    color: #808080;
+    line-height: 28px;
+}
+
 /* nav related styles */
 .navbar{
     max-width: 1440px;
@@ -72,9 +98,11 @@
     display: none;
     font-size: 2rem;
 }
+
+/* banner related styles */
 .banner{
     max-width: 1440px;
-    margin: 0 141px;
+    margin: 0 140px;
     justify-content: space-between;
     align-items: center;
     gap: 120px;
@@ -98,10 +126,93 @@
 }
 
 
+
+/* main section related styles */
+.main{
+    background-image: url(../assets/bg.png);
+    max-width: 1440px;
+    margin: 60px 140px;
+    text-align: center;
+}
+
+/* standard curriculum section related styles */
+.curriculum-section{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.curriculum-cards{
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 80px;
+}
+.kinder, .elementary, .middle{
+    border-radius: 18px;
+    padding: 50px 40px;
+    max-width: 100%;
+} 
+.kinder{
+    border: 1px solid #DEF5FF;
+    box-shadow: 0 0 28.3px 0.94px rgba(0, 0, 0, 0.05) inset;
+    background: linear-gradient(to bottom, rgba(222, 245, 255, 1), rgba(255, 255, 255, 0) );
+}
+.kinder>button{
+    margin-top: 32px;
+    background-color: white;
+    border: none;
+    color: #64C8FF;
+    font-weight: 800;
+    font-size: 1rem;
+}  
+
+.elementary{
+    border: 1px solid #FFF4DC;
+    box-shadow: 0 0 28.3px 0.94px rgba(0, 0, 0, 0.05) inset;
+    background: linear-gradient(to bottom, rgba(255, 244, 220, 1), rgba(255, 255, 255, 0) );
+}
+.elementary>button{
+    margin-top: 32px;
+    background-color: white;
+    border: none;
+    color: #F0AA00;
+    font-weight: 800;
+    font-size: 1rem;
+}   
+
+.middle{
+    border: 1px solid #F2E8FF;
+    box-shadow: 0 0 28.3px 0.94px rgba(0, 0, 0, 0.05) inset;
+    background: linear-gradient(to bottom, rgba(238, 225, 255, 1), rgba(255, 255, 255, 0) );
+}
+.middle>button{
+    margin-top: 32px;
+    background-color: white;
+    border: none;
+    color: #8700FF;
+    font-weight: 800;
+    font-size: 1rem;
+} 
+.arrow{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.fa-circle-arrow-left, .fa-circle-arrow-right{
+    transition: font-size 0.3s;
+}
+.fa-circle-arrow-left:hover {
+    font-size: 2.5rem;
+}
+.fa-circle-arrow-right:hover {
+    font-size: 2.5rem;
+}
+/* our stories section related styles */
+
+
 @media screen and (max-width:576px) {
     .brand-title,
     .nav-links,
-    .contact-button
+    .contact-button,
+    .arrow
     {
         display: none;
     }
@@ -126,6 +237,16 @@
     }
     .banner-description{
         font-size: 1rem;
+    }
+    .main{
+        margin: 60px 10px;
+    }
+    .curriculum-cards{
+        flex-direction: column;
+    }
+    .section-title{
+        margin: 0 0 20px;
+        font-size: 2rem;
     }
 
 }
