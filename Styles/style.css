@@ -210,7 +210,7 @@
 /* our stories section related styles */
 .our-stories-section{
     max-width: 1440px;
-    margin: 60px auto;
+    margin: 60px auto 0;
 }
 .story-cards{
     justify-content: space-between;
@@ -303,6 +303,40 @@
     max-width: 120px;
 }
 
+/* footer section related styles */
+.footer{
+    background-color: #01ACFD;
+
+}
+.footer-container{
+    max-width: 1440px;
+    margin: 0 140px;
+    color: white;
+    grid-template-columns: repeat(3, 1fr);
+}
+.school-info{
+    margin: 120px 30px 120px 0;
+}
+.navigation-links{
+    margin: 120px 50px 120px;
+}
+.navigation-links .nav-items a{
+    color: white;
+}
+
+.footer-logo{
+    max-width: 82px;
+    max-height: 82px;
+}
+
+.logo-name{
+    align-items: center;
+}
+.footer-description{
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 35px;
+}
 
 @media screen and (max-width:576px) {
     .brand-title,
