@@ -37,6 +37,7 @@
     padding: 10px 45px;
     border: none;
     border-radius: 12px;
+    margin-bottom: 60px;
 }
 .section-title{
     font-weight: 800;
@@ -104,13 +105,14 @@
 
 /* banner related styles */
 .banner{
-    margin: 0 140px;
-    justify-content: space-between;
+    max-width: 1440px;
+    margin: 20px auto;
     align-items: center;
-    gap: 120px;
+    gap: 50px;
 }
 .banner-content{
     max-width: 640px;
+    margin: 0 100px;
 }
 .banner-title{
     font-weight: 800;
@@ -125,6 +127,7 @@
 }
 .banner-image{
     max-width: 100%;
+    margin-right: 100px;
 }
 
 
@@ -138,12 +141,13 @@
 
 /* standard curriculum section related styles */
 .curriculum-section{
-    margin: 60px 140px;
+    max-width: 1440px;
+    margin: 60px auto;
 }
 .curriculum-cards{
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 28px;
-    margin-bottom: 80px;
+    margin: 0 100px 60px;
 }
 .kinder, .elementary, .middle{
     border-radius: 18px;
@@ -205,11 +209,12 @@
 }
 /* our stories section related styles */
 .our-stories-section{
-    margin: 60px 140px;
+    max-width: 1440px;
+    margin: 60px auto;
 }
 .story-cards{
     justify-content: space-between;
-    gap: 10px;
+    margin: 0 100px 80px;
 }
 .story-card-left{
     max-width: 600px;
@@ -260,7 +265,6 @@
     max-width: 600px;
 }
 .story-card{
-    max-width: 290px;
     border: none;
     background-color: white;
     border-radius: 16px;
@@ -268,6 +272,7 @@
 }
 .story-card .card-content{
     margin: 0 30px;
+    top: -38px
 }
 .story-title{
     font-weight: 700;
@@ -303,7 +308,8 @@
     .brand-title,
     .nav-links,
     .contact-button,
-    .arrow
+    .arrow,
+    .story-card-left
     {
         display: none;
     }
@@ -318,7 +324,7 @@
         display: block;
     }
     .banner{
-        margin: 0 auto;
+        margin: 0 20px;
         flex-direction: column-reverse;
         text-align: center;
         gap:20px;
@@ -329,9 +335,13 @@
     .banner-description{
         font-size: 1rem;
     }
-    .main{
-        margin: 60px 10px;
+    .banner-image,
+    .banner-content,
+    .curriculum-cards
+    {
+        margin: 0 20px;
     }
+
     .curriculum-cards{
         flex-direction: column;
     }
@@ -339,5 +349,31 @@
         margin: 0 0 20px;
         font-size: 2rem;
     }
-
+    .story-cards{
+        flex-direction: column;
+        margin: 0 20px;
+    }
+    .story-card-right{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 20px;
+    }
+    .story-2-date, .story-3-date, .story-4-date, .story-5-date{
+        padding: 0;
+        font-size: 0.7rem;
+        width: 140px;
+    }
+    .story-card .card-content{
+        margin-left: 10px;
+        top: -30px
+    }
+    .story-title{
+        font-size: 0.7rem;
+    }
+    .button-primary{
+        font-size: 1rem;
+        padding: 10px 30px;
+    }
 }
