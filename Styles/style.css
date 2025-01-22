@@ -38,7 +38,16 @@
     border: none;
     border-radius: 12px;
     margin-bottom: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
 }
+.button-primary:hover{
+    transform: scale(1.1);
+}
+.button-primary:active{
+    transform: scale(1);
+}
+
 .section-title{
     font-weight: 800;
     font-size: 2.875rem;
@@ -97,6 +106,14 @@
     border-radius: 12px;
     font-weight: 600;
     font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.contact-button:hover{
+    background-color: rgb(255, 204, 0);
+}
+.contact-button:active{
+    background-color: rgb(255, 153, 0);
 }
 .fa-bars{
     display: none;
@@ -199,14 +216,22 @@
     cursor: pointer;
 }
 .fa-circle-arrow-left, .fa-circle-arrow-right{
-    transition: font-size 0.3s;
+    transition: transition 0.5s ease-in;
 }
 .fa-circle-arrow-left:hover {
-    font-size: 2.5rem;
+    transform: scale(1.2);
 }
 .fa-circle-arrow-right:hover {
-    font-size: 2.5rem;
+    transform: scale(1.2);
 }
+.fa-circle-arrow-left:active {
+    transform: scale(1);
+}
+.fa-circle-arrow-right:active {
+    transform: scale(1);
+}
+
+
 /* our stories section related styles */
 .our-stories-section{
     max-width: 1440px;
@@ -309,33 +334,57 @@
 
 }
 .footer-container{
-    max-width: 1440px;
     margin: 0 140px;
     color: white;
     grid-template-columns: repeat(3, 1fr);
+    gap: 90px;
+}
+.school-info, .navigation-links, .social-media-links{
+    margin: 120px 0;
 }
 .school-info{
-    margin: 120px 30px 120px 0;
-}
-.navigation-links{
-    margin: 120px 50px 120px;
-}
-.navigation-links .nav-items a{
-    color: white;
+    max-width: 500px;
 }
 
+
 .footer-logo{
-    max-width: 82px;
-    max-height: 82px;
+    max-width: 100%;
 }
 
 .logo-name{
     align-items: center;
+    gap: 10px;
+}
+.school-name{
+    font-size: 3rem;
+    line-height: 40px;
+    margin: 0;
 }
 .footer-description{
     font-weight: 500;
-    font-size: 1rem;
-    margin-top: 35px;
+    font-size: 1.25rem;
+    margin-top: 40px;
+}
+
+.navigation-links .nav-items a{
+    color: white;
+}
+.navigation-links .nav-items{
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+.navigation-links .nav-items .nav-link{
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+.link-title{
+    font-weight: 800;
+    font-size: 1.625rem;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+.social-media-icon{
+    margin-right: 10px;
 }
 
 @media screen and (max-width:576px) {
@@ -358,7 +407,7 @@
         display: block;
     }
     .banner{
-        margin: 0 20px;
+        margin: 0 10px;
         flex-direction: column-reverse;
         text-align: center;
         gap:20px;
@@ -367,7 +416,7 @@
         font-size: 2.25rem;
     }
     .banner-description{
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
     .banner-image,
     .banner-content,
@@ -401,7 +450,7 @@
     }
     .story-card .card-content{
         margin-left: 10px;
-        top: -30px
+        top: -23px
     }
     .story-title{
         font-size: 0.7rem;
@@ -409,5 +458,23 @@
     .button-primary{
         font-size: 1rem;
         padding: 10px 30px;
+    }
+    .footer-container{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 10px;
+        gap: 10px;
+    }
+    .school-info,
+    .social-media-links{
+        margin: 20px 10px;
+    }
+    .navigation-links{
+        padding-left: 10px;
+        margin: 0;
+    }
+    .navigation-links .nav-items{
+        margin-top: 0;
+        margin-bottom: 15px;
+    
     }
 }
